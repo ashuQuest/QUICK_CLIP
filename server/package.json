@@ -1,0 +1,36 @@
+{
+  "name": "quickclip-server",
+  "version": "1.0.0",
+  "description": "QuickClip backend API for text clipboard and large file sharing",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "keywords": ["clipboard", "file-sharing", "express", "s3", "mongodb"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.738.0",
+    "@aws-sdk/s3-request-presigner": "^3.738.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.9.5",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.1.3",
+    "supertest": "^7.0.0"
+  },
+  "config": {
+    "mongodbMemoryServer": {
+      "disablePostinstall": "1"
+    }
+  }
+}
